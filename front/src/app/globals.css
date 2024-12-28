@@ -1,0 +1,103 @@
+@import 'typeface-roboto';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.animate-latido {
+  animation: latido 1.5s infinite;
+}
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+/* reset.css */
+
+/* Remove default margin and padding from all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set base font size and line height */
+html {
+  font-size: 16px; /* Adjust as needed */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Prevents auto-zoom on mobile devices */
+}
+
+/* Basic body styles */
+body {
+  font-family: Arial, sans-serif; /* Replace with your preferred font */
+  color: #333; /* Default text color */
+  margin: 0;
+  cursor: none;
+}
+
+/* Reset heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit; /* Use base font size */
+  font-weight: normal; /* Remove default boldness */
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse; /* Remove gaps between table cells */
+  border-spacing: 0;
+}
+
+/* Normalize buttons and form elements */
+button, input, textarea, select {
+  font: inherit; /* Use the same font as the parent */
+  border: none; /* Remove default borders */
+  outline: none; /* Remove default focus styles */
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%; /* Scale images to fit their container */
+  display: block;
+}
+
+/* Adjust box-sizing for form elements */
+input, textarea, button {
+  box-sizing: border-box; /* Include borders in element dimensions */
+}
