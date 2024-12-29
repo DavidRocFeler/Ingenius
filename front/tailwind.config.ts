@@ -13,6 +13,10 @@ export default {
         md: '768px',
         xl: '1280px',
       },
+      backgroundImage: {
+        'custom-blue-gradient': 'linear-gradient(180deg, #4A68FB, #4A68FB, #4A68FB)',
+        'custom-green-gradient': 'linear-gradient(180deg, #064e3b 0%, #10b981 100%, #064e3b 0%) ',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

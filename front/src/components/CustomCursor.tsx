@@ -21,9 +21,10 @@ const CustomCursor: React.FC = () => {
   return (
     <>
       {/* Hide the default cursor */}
-      <div className="fixed w-[40px] h-[40px] bg-white bg-opacity-70 rounded-full pointer-events-none backdrop-brightness-75 border border-white z-[9999]"
+      <div
+        className="hidden sm:block fixed w-[40px] h-[40px] bg-white bg-opacity-70 rounded-full pointer-events-none backdrop-brightness-75 border border-white z-[9999]"
         style={{
-          top: `${position.y - 20}px`,  // Adjust to center cursor
+          top: `${position.y - 20}px`, // Adjust to center cursor
           left: `${position.x - 20}px`, // Adjust to center cursor
         }}
       />

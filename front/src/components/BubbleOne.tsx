@@ -38,7 +38,7 @@ const BubbleOne: React.FC = () => {
           {/* Button with hover and active styles for redirection. */}
           <button
             onClick={handleClick}
-            className="relative ml-[4rem] top-[7rem] bg-black rounded-[40px] shadow-button transition transform active:scale-95 active:shadow-sm"
+            className="relative ml-[4rem] top-[7rem] hover:bg-black duration-500 bg-custom-blue-gradient rounded-[40px] shadow-button transition transform active:scale-95 active:shadow-sm"
           >
             {/* Button text with padding and light font style. */}
             <p className="font-roboto font-light text-white text-[0.7rem] pt-[0.3rem] pb-[0.3rem] pl-[1rem] pr-[1rem]">

@@ -12,7 +12,7 @@ const Login: React.FC = () => {
       <div className="p-4 flex flex-row w-fit m-auto mt-7">
           <button 
             onClick={handleShowLoginForm}
-            className="px-[2rem] py-[0.5rem] rounded-[12px] font-roboto font-bold text-[0.9rem] text-black mr-1 m-auto border-solid border-[1px] border-black"
+            className="transition transform active:scale-95 active:shadow-sm px-[2rem] py-[0.5rem] rounded-[12px] font-roboto font-bold text-[0.9rem] text-black mr-1 m-auto border-solid border-[1px] border-black"
           >
               Log in
           </button>

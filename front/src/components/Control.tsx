@@ -124,6 +124,49 @@ const Control: React.FC<IControlProps> = ({
     setShowHelp(false);
   }
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.target instanceof HTMLImageElement && e.target.alt === "LogoIngenius" && e.touches.length === 1) {
+      e.preventDefault();
+      setIsDragging(true);
+      setIsDragMode(true);
+      setShowTooltip(false);
+  
+      const rect = controlRef.current?.getBoundingClientRect();
+      if (rect) {
+        const touch = e.touches[0];
+        setOffset({
+          x: touch.clientX - rect.left,
+          y: touch.clientY - rect.top,
+        });
+      }
+    }
+  };
+  
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!isDragging || e.touches.length !== 1) return;
+  
+    const touch = e.touches[0];
+    const parentRect = controlRef.current?.parentElement?.getBoundingClientRect();
+    const controlRect = controlRef.current?.getBoundingClientRect();
+  
+    if (parentRect && controlRect) {
+      let newX = touch.clientX - offset.x;
+      let newY = touch.clientY - offset.y;
+  
+      newX = Math.max(0, Math.min(newX - parentRect.left, parentRect.width - controlRect.width));
+      newY = Math.max(0, Math.min(newY - parentRect.top, parentRect.height - controlRect.height));
+  
+      setPosition({ x: newX, y: newY });
+    }
+  };
+  
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+    setTimeout(() => {
+      setIsDragMode(false);
+    }, 0);
+  };
+
   // Handles dragging behavior by recalculating and updating the control's position based on mouse movement.
   const handleDragMouseMove = (e: MouseEvent) => {
     if (!isDragging) return;
@@ -134,11 +177,6 @@ const Control: React.FC<IControlProps> = ({
     if (parentRect && controlRect) {
       let newX = e.clientX - offset.x;
       let newY = e.clientY - offset.y;
-  
-      // const minX = parentRect.left;
-      // const maxX = parentRect.right - controlRect.width;
-      // const minY = parentRect.top;
-      // const maxY = parentRect.bottom - controlRect.height;
   
       newX = Math.max(0, Math.min(newX - parentRect.left, parentRect.width - controlRect.width));
       newY = Math.max(0, Math.min(newY - parentRect.top, parentRect.height - controlRect.height));
@@ -177,12 +215,16 @@ const Control: React.FC<IControlProps> = ({
     if (isDragging) {
       window.addEventListener("mousemove", handleDragMouseMove);
       window.addEventListener("mouseup", handleMouseUp);
+      window.addEventListener("touchmove", handleTouchMove); 
+      window.addEventListener("touchend", handleTouchEnd); 
     }
     return () => {
       window.removeEventListener("mousemove", handleDragMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchmove", handleTouchMove); 
+      window.removeEventListener("touchend", handleTouchEnd); 
     };
-  }, [isDragging, offset, handleDragMouseMove]);
+  }, [isDragging, offset, handleDragMouseMove, handleTouchMove, handleTouchEnd]);
 
   // Sets the position of the control to the initial position when the `currentInitialPosition` changes.
   useEffect(() => {
@@ -266,6 +308,7 @@ const Control: React.FC<IControlProps> = ({
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               onMouseMove={handleMouseMove}
+              onTouchStart={handleTouchStart}
             />
             {showTooltip && (
               <div
