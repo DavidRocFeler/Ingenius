@@ -9,7 +9,7 @@ const Login: React.FC = () => {
 
   return (
     <div className=' w-[80%] m-auto'>
-      <div className="p-4 flex flex-row w-fit m-auto mt-7">
+      <div className="p-4 flex flex-row w-fit m-auto mt-[0rem]">
           <button 
             onClick={handleShowLoginForm}
             className="transition transform active:scale-95 active:shadow-sm px-[2rem] py-[0.5rem] rounded-[12px] font-roboto font-bold text-[0.9rem] text-black mr-1 m-auto border-solid border-[1px] border-black"

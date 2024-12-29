@@ -9,7 +9,7 @@ const ProgressBar: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-5 mt-5">
+    <div className="flex flex-col items-center gap-5 mt-[1rem]">
       <div className="flex gap-2">
         {[1, 2, 3, 4, 5].map((_, index) => (
           <div

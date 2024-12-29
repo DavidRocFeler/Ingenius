@@ -15,7 +15,7 @@ export default {
       },
       backgroundImage: {
         'custom-blue-gradient': 'linear-gradient(180deg, #4A68FB, #4A68FB, #4A68FB)',
-        'custom-green-gradient': 'linear-gradient(180deg, #064e3b 0%, #10b981 100%, #064e3b 0%) ',
+        'custom-green-gradient': 'linear-gradient(to bottom,  #00B74E 0%, #036C30 100%)',
       },
       colors: {
         background: "var(--background)",

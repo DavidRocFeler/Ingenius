@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Login from './Login';
 import ProgressBar from './ProgressBar';
 import { ISlideBarProps } from '@/interfaces/types';
+import Language from './Language';
 
 const SlideBar: React.FC<ISlideBarProps> = ({ 
   isVisible, 
@@ -30,6 +31,7 @@ const SlideBar: React.FC<ISlideBarProps> = ({
       onMouseEnter={() => setKeepOpen(true)}
       onMouseLeave={() => setKeepOpen(false)}
     >
+      <Language/>
       {showStudioCourse ? <ProgressBar /> : <Login />}
       <div className="relative h-full w-full">
         {children}
