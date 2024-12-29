@@ -1,6 +1,6 @@
 # Ingenius Chat 🤖
 
-Welcome to Ingenius Chat, an intuitive and futuristic interface that allows users to interact directly with a course creation chatbot upon landing on the page. The platform is designed to capture users' attention in the first few seconds and seamlessly guide them through its functionalities. ✨
+Intuitive and futuristic interface that allows users to interact directly with a course creation chatbot upon landing on the page. The platform is designed to capture users' attention in the first few seconds and seamlessly guide them through its functionalities. ✨
 
 # Features 🌟
 
