@@ -42,15 +42,17 @@ const BubbleTwo: React.FC = () => {
         >
           The first L&D tool that works like the canvas tools you’re familiar with.
         </p>
-        <button
-          className={`relative ml-[4rem] top-[6rem] bg-custom-green-gradient rounded-[40px] shadow-button transition transform duration-500 delay-900 hover:bg-gray-800 active:scale-95 active:shadow-sm ${
+        <div className={`flex justify-center items-center relative ml-[4rem] top-[6rem] w-fit py-[1px] px-[1px] bg-[#00B74E] rounded-[40px] shadow-button transition transform duration-1000 delay-900 hover:bg-black active:scale-95 active:shadow-sm ${
             isSecondBubbleHovered ? 'translate-y-0 opacity-100' : 'opacity-0'
-          }`}
+          }`}>
+        <button
+          className='bg-[#EEEEEE] rounded-[40px] hover:bg-black'
         >
-          <p className="font-roboto font-light text-white text-[0.7rem] pt-[0.3rem] pb-[0.3rem] pl-[1rem] pr-[1rem]">
+          <p className="font-roboto font-light hover:text-white text-black text-[0.7rem] pt-[0.3rem] pb-[0.3rem] pl-[1rem] pr-[1rem]">
             Learn More
           </p>
         </button>
+        </div>
       </div>
     </div>
   );

@@ -36,15 +36,17 @@ const BubbleOne: React.FC = () => {
             You&#39;ve never created a high-quality course this fast before.
           </p>
           {/* Button with hover and active styles for redirection. */}
+          <div className="relative flex justify-center items-center px-[0.1rem] py-[0.1rem] ml-[4rem] w-fit top-[7rem] duration-1000 rounded-[40px] shadow-button transition transform active:scale-95 active:shadow-sm hover:bg-black bg-blue-600 ">  
           <button
             onClick={handleClick}
-            className="relative ml-[4rem] top-[7rem] hover:bg-black duration-500 bg-custom-blue-gradient rounded-[40px] shadow-button transition transform active:scale-95 active:shadow-sm"
+            className="bg-[#F0F0F0] hover:bg-black hover:text-[white] rounded-[40px]"
           >
             {/* Button text with padding and light font style. */}
-            <p className="font-roboto font-light text-white text-[0.7rem] pt-[0.3rem] pb-[0.3rem] pl-[1rem] pr-[1rem]">
+            <p className="font-roboto font-light text-black hover:text-[white]  text-[0.7rem] pt-[0.3rem] pb-[0.3rem] pl-[1rem] pr-[1rem]">
               Learn More
             </p>
           </button>
+          </div>
         </div>
       </div>
     </div>

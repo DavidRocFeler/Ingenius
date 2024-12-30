@@ -64,9 +64,9 @@ const LandinPageView: React.FC = () => {
     const viewport = window.innerWidth;
 
     if (isSlideBarOpen && showStudioCourse) {
-      if (viewport <= 400) return 'translate-x-[153px] translate-y-[676px]';
-      if (viewport <= 768) return 'translate-x-[153px] translate-y-[840px]';
-      return 'translate-x-[153px] translate-y-[556px]';
+      if (viewport <= 400) return 'translate-x-[153px] translate-y-[640px]';
+      if (viewport <= 768) return 'translate-x-[153px] translate-y-[805px]';
+      return 'translate-x-[153px] translate-y-[525px]';
     }
 
     if (!isSlideBarOpen && showLandingPage) {

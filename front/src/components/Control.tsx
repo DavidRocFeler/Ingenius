@@ -308,7 +308,7 @@ const Control: React.FC<IControlProps> = ({
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               onMouseMove={handleMouseMove}
-              onTouchStart={handleTouchStart}
+               onTouchStart={handleTouchStart}
             />
             {showTooltip && (
               <div
