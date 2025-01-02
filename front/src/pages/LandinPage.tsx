@@ -144,7 +144,7 @@ const LandinPageView: React.FC = () => {
 
   const courseSizeOne = courseSizeHelpers.find((item) => item.id === 1)
   const courseSizeTwo = courseSizeHelpers.find((item) => item.id === 2)
-  const courseSizeThree = courseSizeHelpers.find((item) => item.id === 2)
+  const courseSizeThree = courseSizeHelpers.find((item) => item.id === 3)
 
   return (
     <div className='w-full max-w-full overflow-x-hidden pt-[1.5rem] pb-[1rem] relative bg-gradient-to-b from-[#FAFAFA] to-[#F3F3F3]

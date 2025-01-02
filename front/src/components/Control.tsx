@@ -252,7 +252,7 @@ const Control: React.FC<IControlProps> = ({
       let newPosition;
 
       if (viewportWidth <= 400) {
-        newPosition = isSlideBarOpen ? { x: 115, y: 205 } : { x: 280, y: 200 }
+        newPosition = isSlideBarOpen ? { x: 115, y: 205 } : { x: 160, y: 300 }
       } else if (viewportWidth <= 600) {
         newPosition = isSlideBarOpen ? { x: 115, y: 205 } : { x: 400, y: 200 }
       } else if (viewportWidth <= 744) {

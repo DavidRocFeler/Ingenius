@@ -14,7 +14,7 @@ export default {
         xl: '1280px',
       },
       backgroundImage: {
-        'custom-blue-gradient': 'linear-gradient(180deg, #4A68FB, #4A68FB, #4A68FB)',
+        'custom-blue-gradient': 'linear-gradient(180deg, #4C6DF4, #4A68FB, #4663D7)',
         'custom-green-gradient': 'linear-gradient(to bottom,  #00B74E 0%, #036C30 100%)',
       },
       colors: {
